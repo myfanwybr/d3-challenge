@@ -1,3 +1,8 @@
+.scaled-svg{
+  width: 100%;
+  height: auto
+}
+
 .aText {
   font-family: sans-serif;
   font-size: 16px;
