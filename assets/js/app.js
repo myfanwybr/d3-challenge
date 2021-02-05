@@ -37,14 +37,14 @@ function loadChart() {
   var svg=d3.select("#scatter")
   .append("svg")
   .attr("preserveAspectRatio", "xMinYMin meet")
-  .attr("viewBox", "0 0 500 500")
+  .attr("viewBox", "0 0 400 400")
   .classed("scaled-svg", true)
   .attr("height", svgHeight)
   .attr("width", svgWidth)
 ;
 
   var chartGroup = svg.append("g")
-    .attr("transform", `translate(${margin.left+30}, ${margin.top -40})`);
+    .attr("transform", `translate(${margin.left+30}, ${margin.top-50})`);
 
 
   //Import Data
@@ -92,6 +92,7 @@ console.log(data.healthcare)
         .append("circle")
         .attr("cx", d => xScale(d.healthcare))
         .attr("cy", d => yScale(d.income))
+        .attr("font-size", "12px")
         .attr("r", "10")
         .attr("fill", "lightblue")
         .attr("opacity", "0.75")
